@@ -21,3 +21,6 @@ There are a few environment variables to allow you to customize the stack:
 
 ## Remove Shipyard Stack
 `docker run -i -t -v /var/run/docker.sock:/docker.sock shipyard/deploy cleanup`
+
+sudo docker build -t shipyard/deploy .
+sudo docker run -i -t -v `pwd`/../docker-tars:/archives -v /var/run/docker.sock:/docker.sock --name shiypard_deploy shipyard/deploy setup
